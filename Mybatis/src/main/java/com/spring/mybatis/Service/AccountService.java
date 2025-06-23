@@ -8,4 +8,5 @@ public interface AccountService {
     public List<account> selectAll();
     public account selectById(int id);
     public int insert(String username, String password, int age);
+    public List<account> selectInPages();
 }

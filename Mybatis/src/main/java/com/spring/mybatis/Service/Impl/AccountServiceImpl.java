@@ -40,4 +40,18 @@ public class AccountServiceImpl implements AccountService {
         }
         return count;
     }
+
+    @Override
+    public List<account> selectInPages() {
+        List<account> list=null;
+        try {
+            //TODO:分页查询实现
+            list = accountMapper.selectInPages(0, 5, 5, 5);
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("selectInPages failed");
+            return null;
+        }
+        return list;
+    }
 }

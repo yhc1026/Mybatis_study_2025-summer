@@ -30,4 +30,9 @@ public class AccountController {
     public int insert (String username, String password, int age) {
         return accountService.insert(username, password, age);
     }
+
+    @PostMapping("/SelectInPages")
+    private List<account> selectInPages() {
+        return accountService.selectInPages();
+    }
 }
