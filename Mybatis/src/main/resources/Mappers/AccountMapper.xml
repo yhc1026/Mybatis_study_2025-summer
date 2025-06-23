@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.mybatis.Mappers.AccountMapper">
+    <insert id="insert">
+        insert into t_account values (#{id}, #{username}, #{password}, #{age});
+    </insert>
+    <select id="selectAll" resultType="com.spring.mybatis.entity.account">
+        select * from t_account;
+    </select>
+    <select id="selectById" resultType="com.spring.mybatis.entity.account">
+        select * from t_account where id=#{id};
+    </select>
+</mapper>
