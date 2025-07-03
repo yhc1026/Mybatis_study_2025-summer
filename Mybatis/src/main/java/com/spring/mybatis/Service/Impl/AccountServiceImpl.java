@@ -24,7 +24,13 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public account selectById(int id) {
-        return accountMapper.selectById(id);
+        account acc = accountMapper.selectById(id);
+        if(acc==null){
+            return null;
+        }
+        else{
+            return accountMapper.selectById(id);
+        }
     }
 
     @Override

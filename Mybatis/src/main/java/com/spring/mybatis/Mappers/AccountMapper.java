@@ -9,6 +9,7 @@ import java.util.List;
 @Mapper
 @Repository
 public interface AccountMapper {
+
     public List<account> selectAll();
     public account selectById(int id);
     public int insert(int id, String username, String password, int age);
